@@ -19,12 +19,47 @@ int main()
 ///el nombre de arreglo es la primera posicion del arreglo
 ///int arr[] es una direccion de memoria entonces
 ///int *arr
-int suma(int *arr, in tam)
+
+
+void imprimirLista(int *arr, int tam)
 {
-    int suma=0;
-    for(int=0; i<tam; i++)
+    for(int i=0; i<tam; i++)
     {
-        suma+=*arr;
+        cout <<  *arr << endl;
         arr++;
     }
 }
+
+int sumar(int *arr, int tam)
+{
+    int suma=0;
+    for(int i=0; i<tam; i++)
+    {
+        suma+=*arr;
+        arr++;
+
+    }
+    cout << arr<< endl;
+    cout << *arr<< endl;
+    cout << suma<< endl;
+}
+/*
+int sumaRecursiva(int *arr, int tam)
+{
+        if(arr!=0){
+        return *arr[arr] + sumaRecursiva(*arr, tam);///3 +({1,2,3,4}, 3
+        }
+}
+*/
+
+
+int main()
+{
+    int p[]={1,2,3,4};
+    imprimirLista(p,4);
+    sumar(p,4);
+   ///maRecursiva(p,4);
+}
+
+
+
