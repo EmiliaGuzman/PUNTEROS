@@ -52,6 +52,33 @@ int sumaRecursiva(int *arr, int tam)
 }
 */
 
+int sumaRecur(int *ptr, int *tam)
+{
+    int inicio=1;
+    if (tam==ptr){
+        return *ptr;
+    }
+    else{
+        return *ptr+sumaRecur(ptr+inicio,tam);
+    }
+
+}
+
+
+void inversion(int *lista,int n)
+{
+    ///int lista[],  lista1[]={};
+    int h;
+    for(int a=0; a<(n/2); a++){
+            h=*(lista+a);
+            *(lista+a)=*(lista+n);
+            *(lista+n)=h;
+            cout << *lista<< endl;
+            lista++;
+    }
+
+}
+
 
 int main()
 {
@@ -59,6 +86,12 @@ int main()
     imprimirLista(p,4);
     sumar(p,4);
    ///maRecursiva(p,4);
+    int n=2;
+    int lista[]={1,2,3};
+
+    cout << sumaRecur(lista,lista+n)<< endl;
+
+    inversion(lista,3);
 }
 
 
