@@ -79,6 +79,19 @@ void inversion(int *lista,int n)
 
 }
 
+void inversionRecur(int *lista, int n,int c=0)
+{
+    int m;
+    if(n==1){
+        return *lista;
+    }
+    else{
+        m=*(lista+c);
+        *(lista+c)=*(lista+n);
+        *(lista+n)=m;
+        cout << inversionRecur(*lista, --n, ++c)
+    }
+}
 
 int main()
 {
@@ -92,6 +105,15 @@ int main()
     cout << sumaRecur(lista,lista+n)<< endl;
 
     inversion(lista,3);
+    
+    int n;
+    cout << "Ingrese longitud de lista: ";
+    cin >> n;
+    int l[n];
+    for(int i=0; i<n; i++){
+        cin >> l[i];
+    }
+    inversionRecur(l,n);
 }
 
 
