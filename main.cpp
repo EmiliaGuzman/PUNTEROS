@@ -93,6 +93,25 @@ void inversionRecur(int *lista, int n,int c=0)
     }
 }
 
+
+void ordenar(int *ptr, int n)
+{
+    int cons;
+    for(int i=0;i<n; i++)
+    {
+        if(*(ptr+i)>*(ptr+(i+1))){
+            cons=*(ptr+i);
+            *(ptr+i)=*(ptr+(i+1));
+            *(ptr+(i+1))=cons;
+        }
+        else{
+            *(ptr+i);
+        }
+    }
+    cout << ptr;
+}
+
+
 int main()
 {
     int p[]={1,2,3,4};
@@ -114,6 +133,9 @@ int main()
         cin >> l[i];
     }
     inversionRecur(l,n);
+    
+    int abs[]={3,6,2};
+    ordenar(abs,3);
 }
 
 
