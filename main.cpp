@@ -111,6 +111,19 @@ void ordenar(int *ptr, int n)
     cout << ptr;
 }
 
+/*
+void insertionsort(int *a, int n){
+    for(int i=1; i<n; i++) {
+        int pos=i;
+        int aux=*(a+i);
+        while((pos>0)&&(*(a+(pos-1))>aux)){
+            *(a+pos)=*(a+(pos-1));
+            pos=pos-1;
+        }
+        *(a+pos)=aux;
+    }
+}*/
+
 
 int main()
 {
@@ -136,6 +149,9 @@ int main()
     
     int abs[]={3,6,2};
     ordenar(abs,3);
+    
+    int lista[]={3,1,7};
+    insertionsort(lista,3);
 }
 
 
